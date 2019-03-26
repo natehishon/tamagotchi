@@ -1,62 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61cfaa9d-a849-4da2-bd96-a81e953475ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/bear.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/buffalo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/chick.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/chicken.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/cow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/crocodile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/dog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/duck.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/elephant.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/frog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/giraffe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/goat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/gorilla.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/hippo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/horse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/monkey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/moose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/narwhal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/owl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/panda.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/parrot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/penguin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/pig.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/rabbit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/rhino.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/sloth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/snake.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/walrus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/whale.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/assets/zebra.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/tamagotchis/imagePicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/reducers/tamagotchiReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/style-sheets/App.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/style-sheets/components/dashboard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middlewares/noTamagotchi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/tamagotchis/TamagotchiFinal.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/tamagotchis/TamagotchiFinal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/tamagotchis/TamagotchiForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/tamagotchis/TamagotchiForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/authReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/authRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/tamagotchiRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/tamagotchiRoutes.js" afterDir="false" />
-    </list>
+    <list default="true" id="61cfaa9d-a849-4da2-bd96-a81e953475ac" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -71,14 +16,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/Dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            <state relative-caret-position="165">
+              <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="22" column="10" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -148,27 +111,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="98">
               <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/tamagotchis/TamagotchiForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="48" column="14" lean-forward="true" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/tamagotchis/formFields.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="42" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -356,16 +298,15 @@
       <updated>1553276109883</updated>
       <workItem from="1553276111537" duration="71882000" />
       <workItem from="1553613427575" duration="530000" />
-      <workItem from="1553614169163" duration="7071000" />
+      <workItem from="1553614169163" duration="7581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79483000" />
+    <option name="totallyTimeSpent" value="79993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50108933" side_tool="true" weight="0.2494043" />
       <window_info id="npm" order="1" side_tool="true" />
@@ -441,13 +382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/User.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -508,13 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="2" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -664,11 +591,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/Dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="165">
+          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="10" />
         </state>
       </provider>
     </entry>

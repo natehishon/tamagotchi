@@ -73,8 +73,6 @@ module.exports = app => {
     app.post('/api/tamagotchi', requireLogin, noTamagotchi, async (req, res) => {
         const { name, assetUrl} = req.body;
 
-        console.log("reqbody");
-        console.log(req.body);
 
         const tamagotchi = new Tamagotchi({
             name,
@@ -84,11 +82,11 @@ module.exports = app => {
 
         try {
 
-            await tamagotchi.save();
+            const newTamagotchi = await tamagotchi.save();
 
             const user = await req.user.save();
 
-            res.send(user);
+            res.send(newTamagotchi);
         } catch (err) {
             res.status(422).send(err);
         }

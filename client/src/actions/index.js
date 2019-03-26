@@ -18,7 +18,7 @@ export const createTamagotchi = (values, history) => async dispatch => {
     const res = await axios.post('/api/tamagotchi', values);
 
     history.push('/');
-    dispatch({ type: FETCH_USER, payload: res.data });
+    dispatch({ type: MOD_TAMAGOTCHI, payload: res.data });
 };
 
 export const feedTamagotchi = (tamagotchi) => async dispatch => {

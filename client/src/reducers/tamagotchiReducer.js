@@ -11,6 +11,7 @@ export default function (state = {}, action){
             return false;
 
         case MOD_TAMAGOTCHI:
+            console.log("here");
             if(action.payload){
                 return action.payload
             }

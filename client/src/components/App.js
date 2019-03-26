@@ -5,8 +5,8 @@ import * as actions from '../actions';
 
 import Header from './Header';
 import Menu from './Menu'
-const Dashboard = () => <h2>Dashboard</h2>
-// const SurveyNew = () => <h2>SurveyNew</h2>
+import DashBoard from './Dashboard'
+import TamagotchiNew from './tamagotchis/TamagotchiNew';
 
 
 class App extends Component {
@@ -21,8 +21,9 @@ class App extends Component {
                 <BrowserRouter>
                     <div>
                         <Header/>
-                        <Route exact path="/" component={Menu}/>
-                        <Route exact path="/tamagotchi" component={Dashboard}/>
+                        <Route exact path="/" component={DashBoard}/>
+                        <Route exact path="/tamagotchi" component={Menu}/>
+                        <Route path="/tamagotchi/new" component={TamagotchiNew}/>
 
                     </div>
                 </BrowserRouter>

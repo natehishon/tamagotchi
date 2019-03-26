@@ -4,7 +4,7 @@ const Menu = () => {
 
     return (
         <div>
-            Landing, logged out?
+            Feed, etc
         </div>
     )
 

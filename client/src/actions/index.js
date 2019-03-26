@@ -6,3 +6,10 @@ export const fetchUser = () => async dispatch => {
     await console.log(res);
     dispatch({ type: FETCH_USER, payload: res.data});
 };
+
+export const createTamagotchi = (values) => async dispatch => {
+    console.log(values);
+    const res = await axios.post('/api/tamagotchi', values);
+    dispatch({ type: FETCH_USER, payload: res.data})
+
+};

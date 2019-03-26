@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "http-proxy-middleware": "^0.19.1",
+    "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
     "react": "^16.8.5",
     "react-bulma-components": "^2.3.0",
@@ -13,6 +14,7 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "redux": "^4.0.1",
+    "redux-form": "^8.1.0",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {

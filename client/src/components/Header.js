@@ -26,7 +26,7 @@ class Header extends Component {
             <nav className="navbar">
                 <div id="" className="navbar-menu">
                     <div className="navbar-start">
-                        <Link to={this.props.auth ? '/tamagotchi' : '/'} className="navbar-item">Tamagotchi</Link>
+                        <Link to={this.props.auth ? '/' : '/'} className="navbar-item">Tamagotchi</Link>
 
                         {this.renderContent()}
                     </div>

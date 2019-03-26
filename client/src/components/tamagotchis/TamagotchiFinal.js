@@ -2,10 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import { connect } from "react-redux";
 import formFields from './formFields';
+import { withRouter } from 'react-router-dom';
 import * as actions from '../../actions'
 import {createTamagotchi} from "../../actions";
 
-const TamagotchiFinal = ({ onCancel, formValues, createTamagotchi }) => {
+const TamagotchiFinal = ({ onCancel, formValues, createTamagotchi, history }) => {
 
     // const finalFields = _.map(formFields, ({name, label}) => {
     //
@@ -37,16 +38,17 @@ const TamagotchiFinal = ({ onCancel, formValues, createTamagotchi }) => {
                 onClick={onCancel}>
                 Back
             </button>
-            <button onClick={() => createTamagotchi(formValues)}>submit</button>
+            <button onClick={() => createTamagotchi(formValues, history)}>submit</button>
         </div>
     )
 };
 
 function mapStateToProps(state) {
+    console.log("state");
     console.log(state);
     return {
         formValues: state.form.tamagotchiForm.values
     };
 };
 
-export default connect(mapStateToProps, actions)(TamagotchiFinal);
+export default connect(mapStateToProps, actions)(withRouter(TamagotchiFinal));

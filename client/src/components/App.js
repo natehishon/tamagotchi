@@ -12,7 +12,7 @@ import TamagotchiNew from './tamagotchis/TamagotchiNew';
 class App extends Component {
     componentDidMount() {
         this.props.fetchUser();
-
+        this.props.fetchTamagotchi();
     }
 
     render() {
@@ -22,7 +22,6 @@ class App extends Component {
                     <div>
                         <Header/>
                         <Route exact path="/" component={DashBoard}/>
-                        <Route exact path="/tamagotchi" component={Menu}/>
                         <Route path="/tamagotchi/new" component={TamagotchiNew}/>
 
                     </div>

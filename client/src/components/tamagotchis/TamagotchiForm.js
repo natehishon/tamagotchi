@@ -1,11 +1,39 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import { reduxForm, Field } from 'redux-form';
+import { reduxForm, Field, change } from 'redux-form';
 import TamagotchiField from './TamagotchiField'
 import formFields from './formFields'
+import ImagePickerComponent from './imagePicker';
+import ImagePicker from 'react-image-picker';
+
+import 'react-image-picker/dist/index.css';
+
+import img1 from '../../assets/bear.png';
+import img2 from '../../assets/buffalo.png';
+import img3 from '../../assets/chick.png';
+import img4 from '../../assets/chicken.png';
+import img5 from '../../assets/cow.png';
+
+const imageList = [img1, img2, img3, img4, img5];
 
 
 class TamagotchiForm extends Component{
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            image: null
+        }
+        this.onPick = this.onPick.bind(this)
+    }
+
+    onPick(image) {
+        // this.setState({image})
+        console.log("image");
+        console.log(image);
+        this.props.dispatch(change('tamagotchiForm', 'assetUrl', image.src));
+    }
+
     renderFields(){
 
         return _.map(formFields, ({ label, name }) => {
@@ -23,7 +51,14 @@ class TamagotchiForm extends Component{
             <div>
 
                 <form onSubmit={this.props.handleSubmit(this.props.onTamagotchiSubmit)}>
-                    {this.renderFields()}
+                    {/*{this.renderFields()}*/}
+                    <Field label="Name" name="name" component="input"></Field>
+                    <Field label="AssetUrl" type="hidden" name="assetUrl" component="input"></Field>
+                    <ImagePicker
+                        images={imageList.map((image, i) => ({src: image, value: i}))}
+                        onPick={this.onPick}
+                    />
+
                     <button type="submit">Submit</button>
                 </form>
 

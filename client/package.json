@@ -11,6 +11,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.5",
     "react-bulma-components": "^2.3.0",
+    "react-confirm-button": "^0.1.0",
     "react-dnd": "^7.4.3",
     "react-dnd-html5-backend": "^7.4.0",
     "react-dom": "^16.8.5",

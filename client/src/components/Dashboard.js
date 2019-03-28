@@ -6,6 +6,8 @@ import * as actions from "../actions";
 import { DragDropContext} from "react-dnd";
 import HTML5Backend from 'react-dnd-html5-backend';
 
+import ConfirmButton from 'react-confirm-button';
+
 
 class Dashboard extends Component {
 
@@ -71,8 +73,14 @@ class Dashboard extends Component {
                                                 disabled={!this.props.tamagotchi.sleep == false || !isNight}>Sleep
                                         </button>
 
-                                        <button className="button is-danger" onClick={() => this.props.deleteTamagotchi(this.props.tamagotchi)}>Delete Pet
-                                        </button>
+                                        <ConfirmButton className="button is-danger"
+                                                       onConfirm={() => this.props.deleteTamagotchi(this.props.tamagotchi)}
+                                                       text="Delete Tamagotchi"
+                                                       confirming={{
+                                                           text: "Are you sure?",
+                                                           className: 'button is-danger'
+                                                       }}>
+                                        </ConfirmButton>
 
                                     </div>
 

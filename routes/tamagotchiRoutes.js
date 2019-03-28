@@ -10,6 +10,7 @@ module.exports = app => {
 
     //run at midnight
     cron.schedule('0 0 0 * * *', async ()  => {
+    // cron.schedule('* * * * *', async ()  => {
 
         await Tamagotchi.find({}, async function(err, tamagotchis) {
             tamagotchis.forEach(async function(tamagotchi) {

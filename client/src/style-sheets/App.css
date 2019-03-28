@@ -1,3 +1,18 @@
+.didnt-make-it-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .didnt-make-it-container .didnt-make-it-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .didnt-make-it-container .didnt-make-it-box p {
+      margin: 20px; }
+    .didnt-make-it-container .didnt-make-it-box button {
+      margin: 20px; }
+
 .link-container {
   display: flex;
   flex-direction: row;
@@ -8,8 +23,6 @@
     display: block;
     margin-top: 100px; }
     .link-container .new-link .link-button {
-      padding: 20px;
-      height: 80px;
       font-size: 20px; }
 
 .tamagotchi-container {
@@ -38,6 +51,11 @@
     margin: 70px 10px 30px 10px; }
     .tamagotchi-container .tamagotchi-box .button-panel .button {
       margin: 5px; }
+  .tamagotchi-container .tamagotchi-box .delete-tamagotchi-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px; }
 
 .new-tamagotchi-container {
   display: flex;

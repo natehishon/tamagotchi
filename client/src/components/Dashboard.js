@@ -36,10 +36,12 @@ class Dashboard extends Component {
 
                 default:
                     if(this.props.tamagotchi.status == "DEAD"){
-                        return <div>
-                                Your Tamagotchi didn't make it
+                        return <div className="didnt-make-it-container">
+                            <div className="didnt-make-it-box">
+                                <p>Your Tamagotchi didn't make it</p>
 
-                                <button onClick={() => this.props.deleteTamagotchi(this.props.tamagotchi)} >New Pet</button>
+                                <button className="button is-success" onClick={() => this.props.deleteTamagotchi(this.props.tamagotchi)} >Start Over</button>
+                            </div>
 
                                 </div>
                     }
@@ -73,14 +75,7 @@ class Dashboard extends Component {
                                                 disabled={!this.props.tamagotchi.sleep == false || !isNight}>Sleep
                                         </button>
 
-                                        <ConfirmButton className="button is-danger"
-                                                       onConfirm={() => this.props.deleteTamagotchi(this.props.tamagotchi)}
-                                                       text="Delete Tamagotchi"
-                                                       confirming={{
-                                                           text: "Are you sure?",
-                                                           className: 'button is-danger'
-                                                       }}>
-                                        </ConfirmButton>
+
 
                                     </div>
 
@@ -91,6 +86,18 @@ class Dashboard extends Component {
                                         <progress className="progress is-success" value={petCount} max="100"></progress>
                                         <span>Clean Ups:</span>
                                         <progress className="progress is-warning" value={cleanCount} max="100"></progress>
+                                    </div>
+
+                                    <div className="delete-tamagotchi-container">
+
+                                    <ConfirmButton className="button is-danger"
+                                                   onConfirm={() => this.props.deleteTamagotchi(this.props.tamagotchi)}
+                                                   text="Delete Tamagotchi"
+                                                   confirming={{
+                                                       text: "Are you sure?",
+                                                       className: 'button is-danger'
+                                                   }}>
+                                    </ConfirmButton>
                                     </div>
 
                                 </div>

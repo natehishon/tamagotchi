@@ -1,4 +1,27 @@
 
+.didnt-make-it-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .didnt-make-it-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p{
+      margin: 20px;
+    }
+
+    button{
+      margin: 20px;
+    }
+
+
+  }
+}
+
 .link-container{
   display: flex;
   flex-direction: row;
@@ -11,8 +34,8 @@
 
     margin-top: 100px;
     .link-button{
-      padding: 20px;
-      height: 80px;
+
+
       font-size: 20px;
     }
 
@@ -28,10 +51,7 @@
   justify-content: center;
 
   .tamagotchi-box{
-    //display: flex;
-    //flex-direction: row;
-    //flex-wrap: wrap;
-    //justify-content: flex-end;
+
     .top-panel{
       display: flex;
       flex-wrap: wrap;
@@ -64,6 +84,13 @@
       .button{
         margin: 5px ;
       }
+    }
+
+    .delete-tamagotchi-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
     }
 
 

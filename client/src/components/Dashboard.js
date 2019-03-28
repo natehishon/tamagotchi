@@ -26,9 +26,11 @@ class Dashboard extends Component {
         if(this.props.auth){
             switch (this.props.tamagotchi) {
                 case false:
-                    return<Link to="/tamagotchi/new">
-                        NEW
-                    </Link>;
+                    return <div className="link-container">
+                                <Link className="new-link" to="/tamagotchi/new" >
+                                    <button className="link-button button is-info"> New Tamagotchi</button>
+                                </Link>
+                            </div>
 
                 default:
                     if(this.props.tamagotchi.status == "DEAD"){
@@ -39,26 +41,51 @@ class Dashboard extends Component {
 
                                 </div>
                     }
-                    return <div>
-                                <span className="tamagotchi-name"> Name:{this.props.tamagotchi.name}</span><br></br>
-                                Meals:{this.props.tamagotchi.meals}<br></br>
-                                Pets:{this.props.tamagotchi.pets}<br></br>
-                                Status:{this.props.tamagotchi.status}<br></br>
-                                Clean Up:{this.props.tamagotchi.clean}<br></br>
-                                Woken Up:{String(this.props.tamagotchi.wake)}<br></br>
-                                Put to Sleep:{String(this.props.tamagotchi.sleep)}<br></br>
-                                <img src={this.props.tamagotchi.assetUrl}></img>
-                                <button onClick={() => this.props.feedTamagotchi(this.props.tamagotchi)} >feed</button>
-                                <button onClick={() => this.props.petTamagotchi(this.props.tamagotchi)} >pet</button>
-                                <button onClick={() => this.props.cleanTamagotchi(this.props.tamagotchi)} >clean up</button>
-                                <button onClick={() => this.props.deleteTamagotchi(this.props.tamagotchi)} >Delete Pet</button>
-                                <button onClick={() => this.props.wakeTamagotchi(this.props.tamagotchi)} disabled={!this.props.tamagotchi.wake == false || !isMorning} >Wake</button>
-                                <button onClick={() => this.props.sleepTamagotchi(this.props.tamagotchi)} disabled={!this.props.tamagotchi.sleep == false || !isNight} >Sleep</button>
+                    return <div className="tamagotchi-container">
+                                <div className="tamagotchi-box">
+                                    <div className="top-panel">
+                                        <div className="info-panel">
+                                            <span className="tamagotchi-name"> Name: {this.props.tamagotchi.name}</span><br></br>
+                                            <span className="tamagotchi-status">Status: {this.props.tamagotchi.status}</span><br></br>
+                                            Woken Up: {this.props.tamagotchi.wake == true
+                                            ? <i className="fa fa-check-circle green"></i>
+                                            : <i className="fa fa-times red"></i>} <br></br>
+                                            Put to Sleep: {this.props.tamagotchi.sleep == true
+                                                ? <i className="fa fa-check-circle green"></i>
+                                                : <i className="fa fa-times red"></i>}<br></br>
+                                        </div>
+                                        <div className="image-panel">
+                                            <img className="tamagotchi-image" src={this.props.tamagotchi.assetUrl}></img>
+                                        </div>
+                                    </div>
 
+                                    <div className="button-panel">
+                                        <button className="button is-primary" onClick={() => this.props.feedTamagotchi(this.props.tamagotchi)}>feed</button>
+                                        <button className="button is-info" onClick={() => this.props.petTamagotchi(this.props.tamagotchi)}>pet</button>
+                                        <button className="button is-warning" onClick={() => this.props.cleanTamagotchi(this.props.tamagotchi)}>clean up</button>
 
-                                <progress className="progress is-primary" value={hungerCount} max="100"></progress>
-                                <progress className="progress is-success" value={petCount} max="100"></progress>
-                                <progress className="progress is-warning" value={cleanCount} max="100"></progress>
+                                        <button className="button is-success" onClick={() => this.props.wakeTamagotchi(this.props.tamagotchi)}
+                                                disabled={!this.props.tamagotchi.wake == false || !isMorning}>Wake
+                                        </button>
+                                        <button className="button is-link" onClick={() => this.props.sleepTamagotchi(this.props.tamagotchi)}
+                                                disabled={!this.props.tamagotchi.sleep == false || !isNight}>Sleep
+                                        </button>
+
+                                        <button className="button is-danger" onClick={() => this.props.deleteTamagotchi(this.props.tamagotchi)}>Delete Pet
+                                        </button>
+
+                                    </div>
+
+                                    <div className="bar-container">
+                                        <span>Meals:</span>
+                                        <progress className="progress is-primary" value={hungerCount} max="100"></progress>
+                                        <span>Pets:</span>
+                                        <progress className="progress is-success" value={petCount} max="100"></progress>
+                                        <span>Clean Ups:</span>
+                                        <progress className="progress is-warning" value={cleanCount} max="100"></progress>
+                                    </div>
+
+                                </div>
                             </div>
             }
         }

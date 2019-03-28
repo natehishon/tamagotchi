@@ -1,5 +1,6 @@
 import 'react-bulma-components/dist/react-bulma-components.min.css';
 import './style-sheets/App.scss';
+import '../node_modules/font-awesome/css/font-awesome.css';
 
 import React from 'react';
 

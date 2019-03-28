@@ -1,3 +1,72 @@
-.tamagotchi-name{
-  color:red;
+
+.link-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  .new-link{
+    display: block;
+
+    margin-top: 100px;
+    .link-button{
+      padding: 20px;
+      height: 80px;
+      font-size: 20px;
+    }
+
+  }
+
+}
+
+.tamagotchi-container {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .tamagotchi-box{
+    //display: flex;
+    //flex-direction: row;
+    //flex-wrap: wrap;
+    //justify-content: flex-end;
+    .top-panel{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+
+    }
+    .info-panel{
+      margin: 20px;
+
+        .green{
+          color: #23d160;
+        }
+        .red{
+          color: #ff3860;
+        }
+
+    }
+    .image-panel{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 20%;
+
+      .tamagotchi-image{
+        margin: 10px;
+      }
+    }
+    .button-panel{
+      margin: 70px 10px 30px 10px;
+      .button{
+        margin: 5px ;
+      }
+    }
+
+
+  }
+
 }

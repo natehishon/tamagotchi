@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,yBAAyB;EACvB,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,MAAM",
+"sources": ["tamagotchi-form.scss"],
+"names": [],
+"file": "tamagotchi-form.css"
+}

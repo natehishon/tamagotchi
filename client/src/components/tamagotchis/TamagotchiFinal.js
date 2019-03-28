@@ -8,37 +8,28 @@ import {createTamagotchi} from "../../actions";
 
 const TamagotchiFinal = ({ onCancel, formValues, createTamagotchi, history }) => {
 
-    // const finalFields = _.map(formFields, ({name, label}) => {
-    //
-    //     return (
-    //         <div key={name}>
-    //             <label>{label}</label>
-    //             <div>
-    //                 {formValues[name]}
-    //             </div>
-    //         </div>
-    //     )
-    //
-    // });
 
     return (
-        <div>
-            <h3>Are you sure?</h3>
+        <div className="tamagotchi-final-container">
+            <div className="tamagotchi-final-box">
+                <h3>Are you sure?</h3>
 
-            <div>
-                <label>Tamagotchi Name</label>
-                <div>{formValues.name}</div>
+                <div className="final-name-container">
+                    <span>Tamagotchi Name: {formValues.name}</span>
+
+                </div>
+
+
+                <div>
+                    <img src={formValues.assetUrl}></img>
+                </div>
+
+                <div className="final-button-container">
+                <button onClick={() => createTamagotchi(formValues, history)} className="button is-info">submit</button>
+                <button onClick={onCancel} className="button is-danger">Back </button>
+
+                </div>
             </div>
-
-            <div>
-                <img src={formValues.assetUrl}></img>
-            </div>
-
-            <button
-                onClick={onCancel}>
-                Back
-            </button>
-            <button onClick={() => createTamagotchi(formValues, history)}>submit</button>
         </div>
     )
 };

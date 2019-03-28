@@ -45,19 +45,35 @@ class TamagotchiForm extends Component{
     }
     render() {
         return (
-            <div>
+            <div className="new-tamagotchi-container">
+
+                <div className="new-tamagotchi-box">
+                <h3>Select your tamagotchi</h3>
 
                 <form onSubmit={this.props.handleSubmit(this.props.onTamagotchiSubmit)}>
-                    {/*{this.renderFields()}*/}
-                    <Field label="Name" name="name" component="input"></Field>
-                    <Field label="AssetUrl" type="hidden" name="assetUrl" component="input"></Field>
-                    <ImagePicker
-                        images={imageList.map((image, i) => ({src: image, value: i}))}
-                        onPick={this.onPick}
-                    />
 
-                    <button type="submit">Submit</button>
+                    <div className="image-picker-container">
+
+                        <Field label="AssetUrl" type="hidden" name="assetUrl" component="input"></Field>
+                        <ImagePicker
+                            images={imageList.map((image, i) => ({src: image, value: i}))}
+                            onPick={this.onPick}
+                        />
+                    </div>
+
+                    <div className="field">
+                        <label className="label">Name</label>
+                        <div className="control">
+                            <Field label="Name" name="name" component="input" className="input"></Field>
+                        </div>
+                    </div>
+
+
+
+                    <button className="button is-info" type="submit">Submit</button>
                 </form>
+
+                </div>
 
             </div>
         )

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,2BAA2B;EACzB,OAAO,EAAC,IAAI;EACZ,SAAS,EAAE,IAAI;EACf,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,MAAM",
+"sources": ["tamagotchi-final.scss"],
+"names": [],
+"file": "tamagotchi-final.css"
+}

@@ -44,8 +44,6 @@ const TamagotchiFinal = ({ onCancel, formValues, createTamagotchi, history }) =>
 };
 
 function mapStateToProps(state) {
-    console.log("state");
-    console.log(state);
     return {
         formValues: state.form.tamagotchiForm.values
     };

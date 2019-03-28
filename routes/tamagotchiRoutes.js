@@ -2,10 +2,76 @@ const mongoose = require('mongoose');
 const requireLogin = require('../middlewares/requireLogin');
 const requireAlive = require('../middlewares/requireAlive');
 const noTamagotchi = require('../middlewares/noTamagotchi');
+const cron = require('node-cron');
 
 const Tamagotchi = mongoose.model('tamagotchis');
 
 module.exports = app => {
+
+    //run at midnight
+    cron.schedule('0 0 0 * * *', async ()  => {
+    // cron.schedule('* * * * *', async ()  => {
+
+        await Tamagotchi.find({}, async function(err, tamagotchis) {
+            tamagotchis.forEach(async function(tamagotchi) {
+                if((tamagotchi.meals < 3 || tamagotchi.pets < 5 || tamagotchi.clean < 2 || tamagotchi.sleep == false || tamagotchi.wake == false) && (tamagotchi.status == "ALIVE") ){
+
+                    //this is not the best, not sure how to cleanly save a full list
+                    await Tamagotchi.findOneAndUpdate(
+                        {
+                            _id: tamagotchi._id,
+
+                        },
+                        {
+                            $set: { ["status"]: "DEAD" }
+                        },
+                        { "new": true}).exec()
+                }
+            });
+
+
+        });
+
+           await Tamagotchi.update(
+                {
+                    status: "ALIVE"
+                },
+                {
+                    $set: {
+                        "pets": 0,
+                        "meals": 0,
+                        "clean": 0,
+                        "sleep": false,
+                        "wake": false
+                    }
+                },
+                {'multi':true}
+            ).exec()
+
+
+
+
+
+    });
+
+    app.post('/api/delete', requireLogin, async (req, res) => {
+
+        try {
+
+            await Tamagotchi.findOneAndDelete({ _id: req.body._id }, function(err) {
+               if(err){
+                   console.log(err)
+               }
+            });
+
+
+            return res.send(false)
+
+
+        } catch (err) {
+            res.status(422).send(err);
+        }
+    });
 
     app.post('/api/clean', requireLogin, async (req, res) => {
 
@@ -16,7 +82,7 @@ module.exports = app => {
 
                 },
                 {
-                    $inc: { ["poops"]: 1 }
+                    $inc: { ["clean"]: 1 }
                 },
                 { "new": true}
             );
@@ -38,6 +104,48 @@ module.exports = app => {
                 },
                 {
                     $inc: { ["pets"]: 1 }
+                },
+                { "new": true}
+            );
+
+            res.send(updated)
+
+        } catch (err) {
+            res.status(422).send(err);
+        }
+    });
+
+    app.post('/api/wake', requireLogin, async (req, res) => {
+
+        try {
+            let updated = await Tamagotchi.findOneAndUpdate(
+                {
+                    _id: req.body._id,
+
+                },
+                {
+                    $set: { ["wake"]: true }
+                },
+                { "new": true}
+            );
+
+            res.send(updated)
+
+        } catch (err) {
+            res.status(422).send(err);
+        }
+    });
+
+    app.post('/api/sleep', requireLogin, async (req, res) => {
+
+        try {
+            let updated = await Tamagotchi.findOneAndUpdate(
+                {
+                    _id: req.body._id,
+
+                },
+                {
+                    $set: { ["sleep"]: true }
                 },
                 { "new": true}
             );
@@ -86,9 +194,9 @@ module.exports = app => {
 
             const user = await req.user.save();
 
-            res.send(newTamagotchi);
+            return res.send(newTamagotchi);
         } catch (err) {
-            res.status(422).send(err);
+            return res.status(422).send(err);
         }
 
     });
@@ -96,7 +204,7 @@ module.exports = app => {
     app.get('/api/tamagotchi', requireLogin, async (req, res) => {
         const tamagotchi = await Tamagotchi.findOne({ _user: req.user.id }).select();
 
-        res.send(tamagotchi);
+        return res.send(tamagotchi);
     });
 
 

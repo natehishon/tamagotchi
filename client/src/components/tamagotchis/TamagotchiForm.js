@@ -28,9 +28,6 @@ class TamagotchiForm extends Component{
     }
 
     onPick(image) {
-        // this.setState({image})
-        console.log("image");
-        console.log(image);
         this.props.dispatch(change('tamagotchiForm', 'assetUrl', image.src));
     }
 

@@ -13,8 +13,7 @@ export const fetchTamagotchi = () => async dispatch => {
 
 export const createTamagotchi = (values, history) => async dispatch => {
 
-    console.log("values");
-    console.log(values);
+
     const res = await axios.post('/api/tamagotchi', values);
 
     history.push('/');
@@ -23,12 +22,9 @@ export const createTamagotchi = (values, history) => async dispatch => {
 
 export const feedTamagotchi = (tamagotchi) => async dispatch => {
 
+    console.log("FEEDIN");
 
     const res = await axios.post('/api/feed', tamagotchi);
-
-    console.log("call");
-    console.log(res.data);
-
 
     dispatch({ type: MOD_TAMAGOTCHI, payload: res.data });
 };
@@ -38,16 +34,33 @@ export const petTamagotchi = (tamagotchi) => async dispatch => {
 
     const res = await axios.post('/api/pet', tamagotchi);
 
-    console.log("call");
-    console.log(res.data);
-
-
     dispatch({ type: MOD_TAMAGOTCHI, payload: res.data });
 };
 
 export const cleanTamagotchi = (tamagotchi) => async dispatch => {
 
     const res = await axios.post('/api/clean', tamagotchi);
+
+    dispatch({ type: MOD_TAMAGOTCHI, payload: res.data });
+};
+
+export const wakeTamagotchi = (tamagotchi) => async dispatch => {
+
+    const res = await axios.post('/api/wake', tamagotchi);
+
+    dispatch({ type: MOD_TAMAGOTCHI, payload: res.data });
+};
+
+export const sleepTamagotchi = (tamagotchi) => async dispatch => {
+
+    const res = await axios.post('/api/sleep', tamagotchi);
+
+    dispatch({ type: MOD_TAMAGOTCHI, payload: res.data });
+};
+
+export const deleteTamagotchi = (tamagotchi) => async dispatch => {
+
+    const res = await axios.post('/api/delete', tamagotchi);
 
     dispatch({ type: MOD_TAMAGOTCHI, payload: res.data });
 };
